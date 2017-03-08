@@ -1,0 +1,76 @@
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+      -ms-border-radius: $radius;
+          border-radius: $radius;
+}
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    background-color: rgb(45, 62, 80);
+    color: rgb(22, 22, 22);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+}
+$width_container : 700px;
+$height_container : 560px;
+$padding_container : 15px;
+div#container {
+    width: $width_container;
+    height: $height_container;
+
+    background-color: rgb(77, 103, 131);
+    color: white;
+
+    position: absolute;
+    left:50%;
+    top:50%;
+    margin-top:-(($height_container/2)+$padding_container);
+    margin-left:-(($width_container/2)+$padding_container);
+    padding:$padding_container;
+    overflow: scroll;
+
+    box-shadow:inset 0px 0px 5px rgb(65, 87, 111);
+    border: 5px solid rgb(65, 87, 111);
+    @include border-radius(20px);
+}
+header {
+    font-size: 30px;
+}
+.clear {
+    width: 100%;
+    clear: both;
+}
+.temp {
+    font-size: 20px;
+}
+.cold_temp {
+    color: rgb(184, 226, 236);
+}
+.med_temp {
+    color: rgb(134, 183, 227);
+}
+.warm_temp {
+    color: rgb(200, 162, 0);
+}
+.hot_temp {
+    color: rgb(208, 114, 75);
+}
+#waterTemp {
+    float: left;
+    width: 50%;
+    text-align: left;
+}
+#date {
+    float: left;
+    width: 50%;
+    text-align: right;
+}
+canvas {
+    background-color:rgba(255, 255, 255, 0.75);
+    padding: 1%;
+    width: 98%;
+    height: 200px;
+}
