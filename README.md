@@ -1,2 +1,4 @@
 # Custom-Surf-Report
-Quick little JavaScript application using spitcast surf report API to display some information.
+
+JavaScript application using spitcast surf report API to display wind & surf information
+
